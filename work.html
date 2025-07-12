@@ -332,24 +332,53 @@ https://templatemo.com/tm-561-purple-buzz
     <script src="assets/js/isotope.pkgd.js"></script>
     <!-- Page Script -->
     <script>
-        $(window).load(function() {
-            // init Isotope
-            var $projects = $('.projects').isotope({
-                itemSelector: '.project',
-                layoutMode: 'fitRows'
-            });
-            $(".filter-btn").click(function() {
-                var data_filter = $(this).attr("data-filter");
-                $projects.isotope({
-                    filter: data_filter
-                });
-                $(".filter-btn").removeClass("active");
-                $(".filter-btn").removeClass("shadow");
-                $(this).addClass("active");
-                $(this).addClass("shadow");
-                return false;
-            });
-        });
+            document.addEventListener("DOMContentLoaded", function () {
+      const itemsPerPage = 9;
+      const items = document.querySelectorAll(".project");
+      const totalPages = Math.ceil(items.length / itemsPerPage);
+      let currentPage = 1;
+
+      function showPage(page) {
+          if (page < 1) page = 1;
+          if (page > totalPages) page = totalPages;
+          currentPage = page;
+
+          items.forEach((item, index) => {
+              item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? "block" : "none";
+          });
+
+          // Update page button styles
+          document.querySelectorAll(".pageBtn").forEach(btn => {
+              btn.classList.remove("btn-light");
+              btn.classList.add("btn-secondary", "text-white");
+          });
+
+          const currentBtn = document.querySelector(`.pageBtn[data-page="${page}"]`);
+          if (currentBtn) {
+              currentBtn.classList.remove("btn-secondary", "text-white");
+              currentBtn.classList.add("btn-light");
+          }
+      }
+
+      // Attach click events
+      document.querySelectorAll(".pageBtn").forEach(btn => {
+          btn.addEventListener("click", function () {
+              const page = parseInt(this.getAttribute("data-page"));
+              showPage(page);
+          });
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", function () {
+          showPage(currentPage - 1);
+      });
+
+      document.getElementById("nextBtn").addEventListener("click", function () {
+          showPage(currentPage + 1);
+      });
+
+      // Show first page on load
+      showPage(currentPage);
+  });
     </script>
     <!-- Templatemo -->
     <script src="assets/js/templatemo.js"></script>
