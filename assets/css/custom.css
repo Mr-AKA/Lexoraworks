@@ -1,8 +1,51 @@
-/*
-Custom CSS for TemplateMo 561 Purple Buzz
+.logo-slider {
+  overflow: hidden;
+  padding: 5px 0;
+}
 
-https://templatemo.com/tm-561-purple-buzz
+.slider-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+}
 
-*/
+.slider-track img {
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
 
+  transition: transform 0.3s, filter 0.3s;
+}
 
+/* Hover effect */
+.slider-track img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Animations */
+.left {
+  animation: moveLeft 25s linear infinite;
+}
+
+.right {
+  animation: moveRight 25s linear infinite;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
