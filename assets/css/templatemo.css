@@ -464,18 +464,18 @@ footer a.text-light:hover {
 
 @media (max-width: 991.98px) {
   .banner-wrapper {
+    position: relative;
     background-image: url("../img/heroimage.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
   }
 
-  /* Add overlay for readability */
+  /* image opacity layer */
   .banner-wrapper::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.664);
+    background: rgba(255, 255, 255, 0.7); /* opacity only on image */
     z-index: 0;
   }
 
