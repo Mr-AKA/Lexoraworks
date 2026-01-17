@@ -82,6 +82,9 @@ a {
   min-height: 60vh;
   width: 100%;
 }
+.carousel {
+  height: 60vh;
+}
 #index_banner .carousel-item {
   min-height: 60vh;
 }
@@ -251,7 +254,6 @@ footer a.text-light:hover {
 /* Services Section */
 .services-section {
   padding: 60px 20px;
-  background: #f8f9fa;
   text-align: center;
   font-family: Arial, sans-serif;
 }
