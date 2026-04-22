@@ -12,3 +12,4 @@ portfolioItems.forEach((item) => {
     modal.show();
   });
 });
+

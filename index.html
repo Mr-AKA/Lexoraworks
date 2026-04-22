@@ -19,13 +19,15 @@
    
 </head>
 
-<body>
+<body >
    <div id="popupOverlay"></div>
 
 <div id="welcomePopup">
-  <div class="icon">🎨</div>
+  <div class="icon">
+    <img src="assets/img/logo.png" alt="Welcome Icon" style="height: 80px;">
+  </div>
   <h2>Welcome!</h2>
-  <p>Your vision, our creativity. Let’s craft stunning designs and amazing websites together for your business!!</p><br>
+  <p>Get ready to get more customers with us</p><br>
  
   <button onclick="closePopup()">Got it!</button>
 </div>
@@ -140,41 +142,50 @@
     
 
     <!-- SERVICES SECTION -->
-<section class="py-5 partners-section">
+<section class="py-5 bg-light mb-4 shadow-sm" id="services">
   <div class="container text-center">
 
-    <h2 class="mb-5 partners-title">Our trusted partners</h2>
+    <!-- Section Header -->
+    <div class="mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted">We provide high-quality digital solutions to help your business grow and stand out.</p>
+    </div>
 
-    <div class="row justify-content-center align-items-end g-4 partners-row">
+    <!-- Services Row -->
+    <div class="row g-4 justify-content-center">
 
-     
-
-      <div class="col-6 col-md-4 col-lg-2 partner ">
-         <div class="partner-card d-block">
-            <img class="p-2" src="./assets/img/icons/webicon.png" style="height: 60px;"/>
-                <h6 class="fw-bold">Web & Software Development</h3>
-
-
-        </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-2 partner ">
-         <div class="partner-card d-block">
-            <img class="p-2" src="./assets/img/icons/webicon.png" style="height: 60px;"/>
-                <h6 class="fw-bold">Web & Software Development</h3>
-
-
+      <!-- Service 1 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="service-card p-4 h-100 shadow-sm rounded-4 bg-white">
+          <img src="./assets/img/icons/design.png" class="mb-3" style="height:60px;" alt="Graphic Design">
+          <h5 class="fw-bold">Graphic Designing</h5>
+          <p class="text-muted small">
+            Creative and professional designs including logos, posters, and branding materials tailored to your business.
+          </p>
         </div>
       </div>
 
-      <div class="col-6 col-md-4 col-lg-2 partner ">
-        <div class="partner-card d-block">
-            <img class="p-2" src="./assets/img/icons/media.png" style="height: 60px;"/>
-                <h6 class="fw-bold">Web & Software Development</h3>
-
+      <!-- Service 2 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="service-card p-4 h-100 shadow-sm rounded-4 bg-white">
+          <img src="./assets/img/icons/advert.png" class="mb-3" style="height:60px;" alt="Marketing">
+          <h5 class="fw-bold">Advertising & Marketing</h5>
+          <p class="text-muted small">
+            Effective marketing strategies and campaigns to increase your visibility and attract more customers.
+          </p>
         </div>
       </div>
 
-    
+      <!-- Service 3 -->
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="service-card p-4 h-100 shadow-sm rounded-4 bg-white">
+          <img src="./assets/img/icons/web.png" class="mb-3" style="height:60px;" alt="Web Development">
+          <h5 class="fw-bold">Web & Software Development</h5>
+          <p class="text-muted small">
+            Modern, responsive websites and custom software solutions built to meet your business needs.
+          </p>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -182,8 +193,8 @@
 
 
 <!-- Portfolio Section -->
-<section class="py-5 bg-light portfolio" id="portfolio" >
-  <div class="container">
+<section class="py-5 bg-light mb-3" id="portfolio" >
+  <div class="container bg-light">
     <div class="text-center mb-4">
       <h2 class="fw-bold">Our Portfolio</h2>
       <p class="text-muted">Some of our recent creative work</p>
@@ -194,7 +205,7 @@
 
     <div class="portfolio-wrapper justify-content-center " >
 
-      <div class="portfolio-item shadow-sm" data-img="/assets/img/work/social/Artboard.jpg">
+      <div class="portfolio-item shadow-sm" data-img="/assets/img/work/branding/pen.jpg">
         <img class="" src="/assets/img/work/branding/pen.jpg">
         
       </div>
@@ -243,7 +254,7 @@
 
 <!-- End portifolio section -->
 
-<section id="why-choose-us" class="why-choose-section">
+<section id="why-choose-us" class="why-choose-section bg-light">
     <div class="container">
         <h2 class="section-title">Why Choose Us</h2>
         <p class="section-subtitle">We deliver creativity, reliability, and results to help your business grow.</p>
